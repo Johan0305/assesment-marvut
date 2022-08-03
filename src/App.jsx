@@ -1,22 +1,7 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import React from "react";
 
 const App = () => {
-  const [buttonClick, setButtonClick] = useState(false);
-  const [search, setSearch] = useState("");
-
-  console.log(buttonClick);
-  return (
-    <>
-      <Header
-        setSearch={setSearch}
-        search={search}
-        setButtonClick={setButtonClick}
-      />
-      <Main buttonClick={buttonClick} search={search} />
-    </>
-  );
+  return <div>hoal</div>;
 };
 
 export default App;
