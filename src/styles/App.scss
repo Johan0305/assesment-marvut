@@ -47,21 +47,10 @@ body {
       display: grid;
       gap: 20px;
       width: 70%;
-      // min-height: 100vh;
+      min-height: 100vh;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
       margin: 20px 0px;
     }
-  }
-}
-
-.Modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .containerGlobalModal {
-    width: 50%;
-    height: 50%;
-    background-color: #d9d9d9;
   }
 }
