@@ -1,7 +1,23 @@
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getSomeCharacters,
+  setList,
+  updateNumberSlice,
+  updatePageMain,
+} from "../features/apiRandM/rickandmorty";
 
-const Header = () => {
-  const [search, setSearch] = useState("");
+const Header = ({ search, setSearch, setButtonClick }) => {
+  const dispatch = useDispatch();
+
+  const handleSubmit = () => {
+    setButtonClick(true);
+    dispatch(setList());
+    dispatch(updatePageMain(1));
+    dispatch(updateNumberSlice(8));
+    dispatch(getSomeCharacters(0, 8, 1, search.toLowerCase()));
+    setButtonClick(false);
+  };
+
   return (
     <header>
       <div className="containerMarvut">
@@ -14,7 +30,7 @@ const Header = () => {
           placeholder="Search by name"
           onChange={({ target }) => setSearch(target.value)}
         />
-        <button>Search</button>
+        <button onClick={handleSubmit}>Search</button>
       </div>
     </header>
   );
