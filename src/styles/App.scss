@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Mate+SC&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  min-width: 1150px;
+  .containerMarvut {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #5a5a5a;
+    justify-content: center;
+    align-items: center;
+    p {
+      color: #ececec;
+      text-align: center;
+      font-size: 40px;
+      font-family: "Comfortaa", cursive;
+    }
+  }
+  .containerSearch {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #452d1d;
+    padding: 20px;
+    input {
+      width: 90%;
+      padding: 7px 0px 7px 10px;
+      background-color: #d9d9d9;
+    }
+    button {
+      width: 9%;
+      font-weight: bold;
+      font-family: "Comfortaa", cursive;
+      font-size: 20px;
+    }
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    // background-color: #5a5a5a;
+    .gridContainer {
+      display: grid;
+      gap: 20px;
+      width: 70%;
+      min-height: 100vh;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      margin: 20px 0px;
+    }
+  }
+}

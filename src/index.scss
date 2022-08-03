@@ -1,2 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /*Components*/
 @import "./styles/App.scss";
+@import "./styles/components/CardInfo.scss";
