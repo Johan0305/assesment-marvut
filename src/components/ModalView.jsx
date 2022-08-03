@@ -6,10 +6,17 @@ const ModalView = ({ open, setOpen, info }) => {
     <Modal open={open} onClose={() => setOpen(false)} className="Modal">
       <div className="containerGlobalModal">
         <div className="containerModalInfo">
-          <img src={info.image} alt={info.name} />
-          <p className="nameInfo">{info.name}</p>
-          <p className="specieInfo">{info.species}</p>
-          <p className="genderInfo">{info.gender}</p>
+          <div className="containerImg">
+            <img src={info.image} alt={info.name} />
+          </div>
+          <div className="containerTextInfo">
+            <p className="nameInfo">{info.name}</p>
+            <p className="specieInfo">{info.species}</p>
+            <p className="genderInfo">{info.gender}</p>
+            <p className="locationInfo">{info.location?.name}</p>
+            <p className="originInfo">{info.origin?.name}</p>
+            <p className="statusInfo">{info.status}</p>
+          </div>
         </div>
       </div>
     </Modal>
